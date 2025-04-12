@@ -45,7 +45,6 @@ def convert_temperature(value, from_unit, to_unit):
 
 def main():
     st.title("📏 Universal Unit Converter")
-    st.write("Convert between different units of measurement")
 
     category = st.selectbox(
         "Select conversion category",
@@ -84,7 +83,7 @@ def main():
             result = convert_temperature(value, from_unit, to_unit)
 
     # Display result
-    st.success(f"**Result:** {value:.2f} {from_unit} = {result:.2f} {to_unit}")
+    st.metric("Converted Value", f"{value} {to_unit}")
 
 
 if __name__ == "__main__":
